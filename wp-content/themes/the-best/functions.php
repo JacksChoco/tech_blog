@@ -150,3 +150,4 @@ require get_template_directory() . '/inc/jetpack.php';
 		return "Read More";
 	}
 		
+add_post_type_support( 'dwqa-question', 'wpcom-markdown' );

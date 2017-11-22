@@ -37,6 +37,7 @@ elseif (isset($_GET['error_message'])) {
 	$this->wpoa_end_login($_GET['error_message']);
 }
 elseif ($_GET['code']) {
+  	error_log("code빠짐;;",0);
   	error_log($_GET['code'],0);
 	// post-auth phase, verify the state:
 	if ($_SESSION['WPOA']['STATE'] == $_GET['state']) {
@@ -53,6 +54,7 @@ elseif ($_GET['code']) {
 	}
 }
 else {
+  	error_log("여기로 빠짐;;",0);
 	// pre-auth, start the auth process:
 	if ((empty($_SESSION['WPOA']['EXPIRES_AT'])) || (time() > $_SESSION['WPOA']['EXPIRES_AT'])) {
 		// expired token; clear the state:
@@ -175,7 +177,7 @@ function get_oauth_identity($wpoa) {
 			break;
 	}
 	// parse and return the user's oauth identity:
-	$response = wp_remote_get('https://api.github.com/orgs/playauto/members', array('headers' => array( 'Authorization' => 'token 3c11de2b60ef6375a98aecf05ff100ff255bceca')));
+	$response = wp_remote_get('https://api.github.com/orgs/playauto/members', array('headers' => array( 'Authorization' => 'token c4e232effc9e79c5613c300f937e809e39a9d860')));
   	error_log('"id":'.$result_obj['id'],0);
 	error_log(strpos($response['body'], '"id":'.$result_obj['id']),0);
 	if(!strpos($response['body'], '"id":'.$result_obj['id'])){

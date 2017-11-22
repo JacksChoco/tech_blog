@@ -52,10 +52,11 @@ function v_forcelogin() {
     $bypass = apply_filters ( 'v_forcelogin_bypass', false );
     $whitelist = apply_filters( 'v_forcelogin_whitelist', array() );
     $redirect_url = apply_filters( 'v_forcelogin_redirect', $url );
-	error_log($url,0);
+
     // Redirect visitors
     if ( preg_replace('/\?.*/', '', $url) != preg_replace('/\?.*/', '', wp_login_url()) && !in_array($url, $whitelist) && !$bypass && !strpos($url,"connect=github") && !strpos($url,"code=") ) {
-      wp_safe_redirect( wp_login_url( $redirect_url ), 302 ); exit();
+      	error_log("들어옴",0);
+		wp_safe_redirect( wp_login_url( $redirect_url ), 302 ); exit();
     }
   }
   else {
