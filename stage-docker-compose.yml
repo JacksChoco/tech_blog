@@ -5,15 +5,7 @@ services:
     image: techblog:latest
     ports:
       - "8080:80"
-    depends_on:
-      - db_for_wp
     environment:
-      - WORDPRESS_DB_HOST=db_for_wp:3306
+      - WORDPRESS_DB_HOST=ec2-13-124-31-153.ap-northeast-2.compute.amazonaws.com:3306
       - WORDPRESS_DB_PASSWORD=example
-    restart: always
-
-  db_for_wp:
-    image: mysql:5.7
-    environment:
-      - MYSQL_ROOT_PASSWORD=example
     restart: always
