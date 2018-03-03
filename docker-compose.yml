@@ -2,14 +2,9 @@ version: '2'
 
 services:
   wp:
-    image: wordpress
-    # build:
-    #   context: .
-    #   dockerfile: Dockerfile
+    image: techblog:latest
     ports:
       - "8080:80"
-    volumes:
-      - ./wordpress/:/var/www/html
     depends_on:
       - db_for_wp
     environment:
@@ -21,6 +16,4 @@ services:
     image: mysql:5.7
     environment:
       - MYSQL_ROOT_PASSWORD=example
-    volumes:
-      - ./mysql-data:/var/lib/mysql
     restart: always
