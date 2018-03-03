@@ -18,3 +18,10 @@
 [06-Jan-2018 09:12:51 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/wp-includes/pomo/translations.php on line 208
 [06-Jan-2018 09:12:52 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/wp-includes/pomo/translations.php on line 208
 [06-Jan-2018 09:12:52 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/wp-includes/pomo/translations.php on line 208
+[03-Mar-2018 10:42:41 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /var/www/html/wp-includes/compat.php on line 502
+[03-Mar-2018 10:42:41 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/wp-includes/pomo/translations.php on line 208
+[03-Mar-2018 10:42:42 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/wp-includes/pomo/translations.php on line 208
+[03-Mar-2018 10:42:42 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/wp-includes/pomo/translations.php on line 208
+[03-Mar-2018 10:47:28 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /var/www/html/wp-includes/compat.php on line 502
+[03-Mar-2018 10:47:30 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/wp-includes/pomo/translations.php on line 208
+[03-Mar-2018 10:47:30 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/wp-includes/pomo/translations.php on line 208

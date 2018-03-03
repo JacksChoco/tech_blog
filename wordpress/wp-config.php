@@ -29,7 +29,7 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', 'example');
 
 /** MySQL hostname */
-define('DB_HOST', 'db_for_wp:3306');
+define('DB_HOST', 'ec2-13-124-31-153.ap-northeast-2.compute.amazonaws.com:3306');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');

@@ -1,11 +1,23 @@
-version: '2'
+version: '3.1'
 
 services:
   wp:
-    image: techblog:latest
+    image: wordpress
     ports:
       - "8080:80"
+    volumes:
+      - ./wordpress/:/var/www/html
+    depends_on:
+      - db_for_wp
     environment:
-      - WORDPRESS_DB_HOST=ec2-13-124-31-153.ap-northeast-2.compute.amazonaws.com:3306
+      - WORDPRESS_DB_HOST=db_for_wp:3306
       - WORDPRESS_DB_PASSWORD=example
+    restart: always
+
+  db_for_wp:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=example
+    volumes:
+      - ./mysql-data:/var/lib/mysql
     restart: always
